@@ -2,6 +2,7 @@ package com.My.HotelBooking.Entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Set;
 
