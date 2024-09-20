@@ -41,6 +41,11 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public User findByMobileNumber(String mobileNumber) {
+        return userRepository.findByMobileNumber(mobileNumber);
+    }
+
+
     // Get user by ID
     public Optional<User> getUserById(Long id) {
         return userRepository.findById(id);
@@ -74,5 +79,15 @@ public class UserService {
     // Delete user by ID
     public void deleteUserById(Long id) {
         userRepository.deleteById(id);
+    }
+
+
+    public void saveUser(User user) {
+        userRepository.save(user);
+    }
+
+
+    public boolean existsByMobileNumber(String mobileNumber) {
+        return userRepository.existsByMobileNumber(mobileNumber);
     }
 }
