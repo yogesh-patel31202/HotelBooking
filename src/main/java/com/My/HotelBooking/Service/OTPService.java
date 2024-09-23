@@ -28,9 +28,9 @@ public class OTPService {
                 .build();
         MediaType mediaType = MediaType.parse("text/plain");
         RequestBody body = RequestBody.create(mediaType, "");
-        String key_2fa = "5f3bb7a8-76be-11ef-8b17-0200cd936042";
+        String key_2fa = "5fxxxx7a8-76be-11ef-8b17-02sdxxxd936042"; // this is not original key replace with your key
         Request request = new Request.Builder()
-                .url("https://2factor.in/API/V1/"+key_2fa+"/SMS/+91"+mobileNumber+"/AUTOGEN2/"+otp)
+                .url("https://2factor.in/API/V1/"+key_2fa+"/SMS/+91"+mobileNumber+"/AUTOGEN2/OTP1")
                 .method("GET", body)
                 .build();
 
